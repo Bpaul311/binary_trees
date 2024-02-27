@@ -14,19 +14,19 @@
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
 	size_t nodes = 0;
-	
+
 	/* Check if the tree is NULL */
 	if (tree == NULL)
 		return (0);
 
-    /* If the current node has atleast one chid, increment the nodes count */
-    if (tree->left != NULL || tree->right != NULL)
-        nodes++;
+	/* If the current node has atleast one chid, increment the nodes count */
+	if (tree->left != NULL || tree->right != NULL)
+	nodes++;
 
-    /* Recursively count the nodes in the left and right subtrees */
-    nodes += binary_tree_nodes(tree->left);
-    nodes += binary_tree_nodes(tree->right);
+	/* Recursively count the nodes in the left and right subtrees */
+	nodes += binary_tree_nodes(tree->left);
+	nodes += binary_tree_nodes(tree->right);
 
-    /* Return the total number of nodes */
-    return (nodes);
+	/* Return the total number of nodes */
+	return (nodes);
 }
