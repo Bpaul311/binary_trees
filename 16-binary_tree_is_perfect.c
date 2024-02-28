@@ -12,20 +12,20 @@
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-    size_t left_height, right_height;
+	size_t left_height, right_height;
 
-    /* Check if the tree is NULL */
-    if (tree == NULL)
-        return (0);
+	/* Check if the tree is NULL */
+	if (tree == NULL)
+	return (0);
 
-    /* Calculate the height of the left subtree */
-    left_height = binary_tree_height(tree->left);
+	/* Calculate the height of the left subtree */
+	left_height = binary_tree_height(tree->left);
 
-    /* Calculate the height of the right subtree */
-    right_height = binary_tree_height(tree->right);
+	/* Calculate the height of the right subtree */
+	right_height = binary_tree_height(tree->right);
 
-    /* Return the maximum height of the left and right subtrees, plus 1 for the current node */
-    return (1 + (left_height > right_height ? left_height : right_height));
+	/*Return maximum height of left and right subtrees, plus 1 for current node */
+	return (1 + (left_height > right_height ? left_height : right_height));
 }
 /**
  * binary_tree_is_perfect - Checks if a binary tree is perfect.
@@ -40,11 +40,11 @@ size_t binary_tree_height(const binary_tree_t *tree)
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int left_height, right_height = 0;
-	
-	if (tree == NULL )
+
+	if (tree == NULL)
 		return (0);
 	left_height = binary_tree_height(tree->left);
-        right_height = binary_tree_height(tree->right);
+	right_height = binary_tree_height(tree->right);
 
-	return (( left_height == right_height) ? 1 : 0);
+	return ((left_height == right_height) ? 1 : 0);
 }
