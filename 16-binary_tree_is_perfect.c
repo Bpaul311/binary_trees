@@ -75,7 +75,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	return (is_perfect_recursive(tree, 0, &level) &
-			&binary_tree_height(tree->left) == binary_tree_height(tree->right) &&
+	return (is_perfect_recursive(tree, 0, &level) &&
+			binary_tree_height(tree->left) == binary_tree_height(tree->right) &&
 			binary_tree_nodes(tree->left) == binary_tree_nodes(tree->right));
 }
