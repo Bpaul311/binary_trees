@@ -13,23 +13,19 @@
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
-    size_t size = 0;
+	size_t size = 0;
 
-    /* Check if the tree is NULL */
-    if (tree == NULL)
-        return (0);
-
-    /* Calculate the size of the left subtree */
-    if (tree->left)
-        size += binary_tree_size(tree->left);
-
-    /* Calculate the size of the right subtree */
-    if (tree->right)
-        size += binary_tree_size(tree->right);
-
-    /* Increment the size to include the current node */
-    size++;
-
-    /* Return the total size */
-    return (size);
+	/* Check if the tree is NULL */
+	if (tree == NULL)
+		return (0);
+	/* Calculate the size of the left subtree */
+	if (tree->left)
+		size += binary_tree_size(tree->left);
+	/* Calculate the size of the right subtree */
+	if (tree->right)
+		size += binary_tree_size(tree->right);
+	/* Increment the size to include the current node */
+	size++;
+	/* Return the total size */
+	return (size);
 }
